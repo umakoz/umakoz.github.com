@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[仮実装]]></title>
-  <link href="http://www.makoz.net/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 勉強会 | 仮実装]]></title>
+  <link href="http://www.makoz.net/blog/categories/mian-qiang-hui/atom.xml" rel="self"/>
   <link href="http://www.makoz.net/"/>
   <updated>2013-06-18T13:01:27+09:00</updated>
   <id>http://www.makoz.net/</id>
@@ -107,7 +107,7 @@ TDDを導入すると、少しずつテストできるから、泥沼にハマ�
 
 <p>これからはグリーンバンドを身につけて、自分を戒めながら、テストを書いて行きます。</p>
 
-<p><img src="http://www.makoz.net/images/green_band.jpg" width="100" height="100"></p>
+<p><img src="/images/green_band.jpg" width="100" height="100"></p>
 
 <p>6月は Scrum Boot Camp と TDD Boot Camp という 2つの Boot Camp に立て続けに参加したので疲れた。</p>
 
