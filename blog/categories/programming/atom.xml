@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: programming | umamimemo]]></title>
+  <link href="http://www.makoz.net/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://www.makoz.net/"/>
+  <updated>2014-05-20T17:28:31+09:00</updated>
+  <id>http://www.makoz.net/</id>
+  <author>
+    <name><![CDATA[umakoz]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Typetalk RubyGems を作ってみた]]></title>
+    <link href="http://www.makoz.net/blog/2014/05/20/made-typetalk-rubygems/"/>
+    <updated>2014-05-20T17:35:35+09:00</updated>
+    <id>http://www.makoz.net/blog/2014/05/20/made-typetalk-rubygems</id>
+    <content type="html"><![CDATA[<h2>あらまし</h2>
+
+<p>5月28日に開催される <a href="http://www.zusaar.com/event/6377007">Typetalk Hack Fukuoka</a>  というイベントに参加する予定なのです。で、何を作ろうかなと思案して、 RubyGems を作ってみようと思いつきました。あったら簡単に Typetalk 使えて便利だろうなと。しかし、イベント内で完成させる自信がありません。参加しておいて何も成果がないのも嫌なので準備を始めました。ウォーミングアップがてらコーディングしていると、勢い余って公開できそうなレベルまで完成してしまいました。寝かせておいても意味がないので、フライングして RubyGems.org にて公開することにします。</p>
+
+<ul>
+<li><a href="https://github.com/umakoz/typetalk">GitHub</a></li>
+<li><a href="https://rubygems.org/gems/typetalk">RubyGems.org</a></li>
+</ul>
+
+
+<h2>Typetalk って何？</h2>
+
+<p><a href="http://typetalk.in/ja/">Typetalk</a> （タイプトーク）はパソコンやスマホで簡単にメッセージのやりとりができるコミュニケーションツールです。
+<a href="http://nulab-inc.com/ja/">nulab</a> さんがサービスを提供しています。</p>
+
+<h2>なにができるの？</h2>
+
+<p><a href="http://developers.typetalk.in/api_ja.html">Typetalk API</a> を全てラップして使えるようにしてます。例えば次のようにして、トピックにメッセージを送れます。素でコーディングするよりは簡単に Typetalk を使えるはずです。</p>
+
+<pre><code>require 'typetalk'
+Typetalk.configure do |config|
+  config.client_id = '...'
+  config.client_secret = '...'
+end
+topic_id = ...
+Typetalk::Api.new.post_message(topic_id, 'メッセージ')
+</code></pre>
+
+<p>ドキュメントは今のところ <a href="https://github.com/umakoz/typetalk/blob/master/README.md">README.md</a> に記したものが全てです。ひと通りメソッドは紹介していますが、まだまだ不備がありますので、今後、整備していきます。</p>
+
+<h2>今後のこととか</h2>
+
+<p>今のバージョンは単に API をラップしただけのライブラリになっていますので、もう少し抽象化して扱えるようにします。</p>
+
+<h2>感想</h2>
+
+<p>RubyGems を公開するのも初めてだったので、いろいろと勉強になりました。Bundler を使えば、とても簡単に Gem 化して公開できるので、みんなもどしどし公開するといいと思うよ。あと、<a href="https://github.com/lostisland/faraday">Faraday</a> と <a href="https://github.com/bblimke/webmock">WebMock</a> 、 <a href="https://github.com/vcr/vcr">VCR</a> はマジ便利。</p>
+
+<p><a href="http://www.zusaar.com/event/6377007">Typetalk Hack Fukuoka</a> 向けのネタがなくなったので、何か新しいアイディアを考えねば&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>
